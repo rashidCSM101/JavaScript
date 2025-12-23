@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="scroll-container" data-scroll-container>
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">University</div>
+                <ul class="nav-menu">
+                    <li><a href="#home" data-scroll-to>Home</a></li>
+                    <li><a href="#about" data-scroll-to>About</a></li>
+                    <li><a href="#programs" data-scroll-to>Programs</a></li>
+                    <li><a href="#contact" data-scroll-to>Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Hero Section with Image Slider -->
+        <section id="home" class="hero-section" data-scroll-section>
+            <div class="slider-container">
+                <div class="slide active">
+                    <img src="image1.jpg" alt="Campus Image 1">
+                    <div class="slide-overlay">
+                        <h1 data-scroll data-scroll-speed="2">Welcome to Our University</h1>
+                        <p data-scroll data-scroll-speed="1">Empowering Future Leaders</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="image2.jpg" alt="Campus Image 2">
+                    <div class="slide-overlay">
+                        <h1 data-scroll data-scroll-speed="2">Excellence in Education</h1>
+                        <p data-scroll data-scroll-speed="1">Building Tomorrow's Innovators</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="image3.jpg" alt="Campus Image 3">
+                    <div class="slide-overlay">
+                        <h1 data-scroll data-scroll-speed="2">Join Our Community</h1>
+                        <p data-scroll data-scroll-speed="1">Where Dreams Take Flight</p>
+                    </div>
+                </div>
+                <button class="slider-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="slider-btn next" onclick="changeSlide(1)">&#10095;</button>
+                <div class="slider-dots">
+                    <span class="dot active" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="content-section" data-scroll-section>
+            <div class="container">
+                <h2 data-scroll data-scroll-speed="1">About Our University</h2>
+                <p data-scroll data-scroll-speed="0.5">We are a leading educational institution offering a variety of programs designed to empower students with the knowledge and skills they need for success.</p>
+            </div>
+        </section>
+
+        <!-- Programs Section -->
+        <section id="programs" class="content-section" data-scroll-section>
+            <div class="container">
+                <h2 data-scroll data-scroll-speed="1">Academic Programs</h2>
+                <p data-scroll data-scroll-speed="0.5">Explore our diverse range of undergraduate, postgraduate, and PhD programs.</p>
+                <div class="programs-grid" data-scroll data-scroll-speed="0.5">
+                    <div class="program-card">
+                        <h3>Undergraduate</h3>
+                        <p>4-year programs across multiple disciplines</p>
+                    </div>
+                    <div class="program-card">
+                        <h3>Postgraduate</h3>
+                        <p>Advanced degrees and specializations</p>
+                    </div>
+                    <div class="program-card">
+                        <h3>PhD Programs</h3>
+                        <p>Research-focused doctoral programs</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Three.js Canvas Section -->
+        <section id="threejs-section" class="canvas-section" data-scroll-section>
+            <div class="container">
+                <h2 data-scroll data-scroll-speed="1">Innovation & Technology</h2>
+                <canvas id="threejs-canvas"></canvas>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="content-section" data-scroll-section>
+            <div class="container">
+                <h2 data-scroll data-scroll-speed="1">Contact Us</h2>
+                <p data-scroll data-scroll-speed="0.5">Feel free to reach out to us for more information about admissions, programs, and more.</p>
+                <div class="contact-info" data-scroll data-scroll-speed="0.5">
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <p>admissions@university.edu</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Phone</h3>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Address</h3>
+                        <p>123 University Ave, City, State 12345</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer data-scroll-section>
+            <div class="container">
+                <p>&copy; 2025 University. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
