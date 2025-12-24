@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #212121;
+        color: white;
+    }
+</style>
+
+<body>
+    <ul class="languages">
+        <li>language 1</li>
+        <li>language 2</li>
+        <li>language 3</li>
+    </ul>
+</body>
+<script>
+    const ul = document.querySelector('.languages').className;
+    const li = document.createElement('li');
+    const text = document.createTextNode("Language 4")
+    li.appendChild(text);
+    document.querySelector('.languages').appendChild(li); 
+    
+    const addLanguage=(lang)=>{
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(lang));
+        document.querySelector('.languages').appendChild(li); 
+    }
+    addLanguage("Language 5");
+    addLanguage("Language 6");
+    const styleUl = ()=>{
+        const ul = document.querySelector('.languages');
+        ul.style.border="2px solid white";
+        ul.style.width="200px";
+        ul.style.margin="auto";
+        ul.style.padding="10px";
+        ul.style.backgroundColor="grey";
+        ul.style.listStyleType="none";
+        const lis = document.querySelectorAll('.languages li');
+        lis.forEach((li)=>{
+            li.style.padding="5px";
+            li.style.borderBottom="1px solid black";
+        });
+    }
+    styleUl();
+   
+</script>
+
+</html>
