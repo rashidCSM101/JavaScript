@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f0f0f0; */
+    margin: 0;
+    padding: 0;
+}
+
+.canvas-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    /* border-radius: 50%; */
+    /* color: white; */
+    font-size: 16px;
+    margin: 10px;
+    border: 2px solid #333;
+}
+
+#circle1 {
+    background-color: rgb(48, 48, 48);
+}
+
+#circle2 {
+    background-color: green;
+}
+
+#circle3 {
+    background-color: blue;
+}
+
+#circle4 {
+    background-color: orange;
+}
